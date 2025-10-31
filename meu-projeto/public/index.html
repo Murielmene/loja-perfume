@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parfum Senac</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Georgia", serif;
+      background-color: #d8c15b;
+      font-size: 20px;
+    }
+
+    /* HEADER */
+    header {
+      background-color: #d8c15b;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 15px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      height: 40px;
+    }
+
+    .search-bar {
+      flex: 1;
+      margin: 0 10px;
+      padding: 5px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+    }
+
+    .menu-icon {
+      font-size: 26px;
+      cursor: pointer;
+    }
+
+    /* MENU */
+    .menu {
+      display: none;
+      background-color: white;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    .menu a {
+      display: block;
+      color: black;
+      text-decoration: none;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .menu a:hover {
+      background-color: #eee;
+    }
+
+    /* BANNER */
+    .banner {
+      text-align: center;
+      background-color: white;
+      padding: 15px;
+    }
+
+    .banner h1 {
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+
+    .banner p {
+      font-size: 0.9em;
+      margin-top: 5px;
+    }
+
+    .image-banner {
+      width: 100%;
+      height: 400px;
+      background-color: #222;
+      background-image: url("perfumeprincipal.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* SESSÕES DE PRODUTOS */
+    section {
+      text-align: center;
+      padding: 30px 10px;
+    }
+
+    section h2 {
+      font-size: 1.7em;
+      margin-bottom: 20px;
+    }
+
+    .product-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .product {
+      width: 130px;
+      height: 160px;
+      background-color: #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .product img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: white;
+      text-align: center;
+      padding: 15px 10px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between ;
+    }
+
+    footer .social {
+      font-size: 0.9em;
+      color: black;
+      margin-bottom: 5px;
+    }
+
+    footer p {
+      font-weight: bold;
+    }
+
+    footer img {
+      height: 100px;
+      margin-top: 5px;
+    }
+
+    #rodape{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-self: center;
+        margin-left: 50px;
+    }
+  
+    #rodape p{
+        margin-top: 50px;
+        margin-right: 30px;
+        
+    }
+    #masculino{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      
+      width: 500px;
+    }
+    .product-grid{
+      display: flex;
+      flex-wrap: wrap;
+      width: 500px;
+      align-items: center;
+      margin-left: 700px;
+    }
+
+    /* RESPONSIVO */
+    @media (max-width: 600px) {
+      .product {
+        width: 100px;
+        height: 130px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- CABEÇALHO -->
+  <header>
+    <img src="logodecima.png" alt="Logo Parfum Senac" class="logo">
+    <input type="text" class="search-bar" placeholder="Buscar perfumes...">
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  </header>
+
+  <!-- MENU MOBILE -->
+  <div class="menu" id="menu">
+    <a href="#">Início</a>
+    <a href="#Masculino">Masculinos</a>
+    <a href="#Feminino">Femininos</a>
+    <a href="#Contato">Contato</a>
+  </div>
+
+  <!-- BANNER -->
+  <div class="banner">
+    <h1>Parfum senac</h1>
+    <p>A melhor loja de perfume do Senac<br>com os melhores preços!</p>
+  </div>
+
+  <div class="image-banner"></div>
+
+  <!-- PERFUMES MASCULINOS -->
+  <section id="Masculino">
+    <h2>Perfumes Masculinos</h2>
+    <div class="product-grid">
+      <div class="product"><img src="elixir.png" alt="Perfume Masculino 1"><p>$1000</p></div>
+      <div class="product"><img src="sauve.png" alt="Perfume Masculino 2"><p>$1000</p></div>
+      <div class="product"><img src="bleu.png" alt="Perfume Masculino 3"><p>$1000</p></div>
+      <div class="product"><img src="azzaro.webp" alt="Perfume Masculino 3"><p>$1000</p></div>
+      <div class="product"><img src="invictus.webp" alt="Perfume Masculino 3"><p>$1000</p></div>
+      <div class="product"><img src="1million.webp" alt="Perfume Masculino 3"><p>$1000</p></div>
+      <div class="product"><img src="212vip.jpg" alt="Perfume Masculino 3"><p>$1000</p></div>
+      <div class="product"><img src="diorpourhomme.webp" alt="Perfume Masculino 3"><p>$1000</p></div>
+      <div class="product"><img src="versacemen.jpg" alt="Perfume Masculino 3"><p>$1000</p></div>
+
+    </div>
+  </section>
+
+  <!-- PERFUMES FEMININOS -->
+  <section id="Feminino">
+    <h2>Perfumes Femininos</h2>
+    <div class="product-grid">
+      <div class="product"><img src="good.png" alt="Perfume Feminino 1"><p>$200</p></div>
+      <div class="product"><img src="prada.png" alt="Perfume Feminino 2"><p>$200</p></div>
+      <div class="product"><img src="ch.png" alt="Perfume Feminino 3"><p>$200</p></div>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer id="Contato">
+    <div class="social">Siga-nos: Instagram ✕ Facebook</div>
+    <div id="rodape">
+        <p>Parfum senac</p>
+        <img src="logo.png" alt="Logo rodapé">
+
+    </div>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menu");
+      menu.style.display = (menu.style.display === "block") ? "none" : "block";
+    }
+  </script>
+</body>
+</html>
